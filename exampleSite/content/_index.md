@@ -1,7 +1,9 @@
 ---
-title: 'Han Songwen (韩松纹)'
-meta_title: 'Han Songwen | Global Publishing & AI Solutions'
-description: "资深国际出版经理，专注于 AI 大模型流转优化与全球学术话语体系建设。"
+title: "Core Expertise"
+description: "聚焦 AI 驱动的国际出版全流程方案"
+---
+
+致力于通过技术手段消除中外出版规范差异，构建从内容转码到全球分销的高效流转模式。
 
 # 视觉处理：那个粉色的 pointing.svg 必须拿掉
 intro_image: ""  # 先留空，或者换成一张你喜欢的梦核风/DV感照片的路径
