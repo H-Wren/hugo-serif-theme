@@ -86,32 +86,40 @@ body, .header, .footer, .sub-footer {
 a {
   color: #000 !important;
 }
-/* 让底部（Footer）的人名变黑，提高清晰度 */
-.footer, .sub-footer, .sub-footer a, .sub-footer-inner {
-  color: #000000 !important;
-}
+/* --- 汉松文视觉修正案：强制生效版 --- */
 
-/* 确保底部社交图标也是黑色 */
-.sub-footer .social-icons i, .sub-footer .social-icons a {
-  color: #000000 !important;
-}
-/* 隐藏掉那个带粉色的人物大插画 */
-.home-intro img {
+/* 1. 彻底清除粉色小人插画 */
+.home-intro img, .intro img {
   display: none !important;
 }
 
-/* 调整左侧文字宽度，让它居中或更有排版感 */
-.home-intro .col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-align: center; /* 或者保持 left，根据你喜好 */
+/* 2. 让文字区域全宽显示，不再给图片留位子 */
+.home-intro .col-12, .intro .col-12 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
 }
-/* 统一页眉 Logo 颜色为黑色 */
-.logo a, .main-menu a {
+
+/* 3. 修正顶部 Logo 和 菜单颜色 */
+.logo a, .logo span, .main-menu a {
+  color: #000000 !important;
+}
+.logo-mobile a {
   color: #000000 !important;
 }
 
-/* 鼠标悬停在菜单上时，显示一个淡淡的灰色而不是粉色 */
-.main-menu a:hover {
-  color: #666666 !important;
+/* 4. 解决底部人名看不清的问题：强制加深底色并变黑文字 */
+.sub-footer {
+  background: #E8E4DE !important; /* 稍微加深一点米色，做出层次感 */
+  padding: 20px 0 !important;
+}
+.sub-footer-inner, .sub-footer a, .sub-footer span, .footer-copy {
+  color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* 5. 所有的粉色文字/按钮统一变黑 */
+a, .button, .btn, h1, h2, h3 {
+  color: #000000 !important;
 }
