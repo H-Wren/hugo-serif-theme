@@ -166,3 +166,34 @@ a, .button, .btn, h1, h2, h3 {
 .call-to-action {
   display: none !important;
 }
+/* --- 视觉整洁度终极优化 --- */
+
+/* 1. 强制 Logo 变黑 (针对 HugoSerif) */
+.logo, .logo a, .logo span, .logo strong, .logo b {
+  color: #000000 !important;
+}
+
+/* 2. 职业概述：改为两端对齐并靠左排列 */
+.home-intro {
+  text-align: left !important; /* 整体容器靠左 */
+}
+
+.home-intro .col-12 {
+  margin: 0 !important;      /* 彻底取消居中偏移 */
+  max-width: 850px !important; /* 限制宽度，防止文字铺满屏幕导致阅读困难 */
+}
+
+.home-intro p, .home-intro h1 {
+  text-align: justify !important; /* 文字两端对齐，保持边缘整齐 */
+  text-justify: inter-word;
+}
+
+/* 3. 彻底清除右上角所有粉色按钮 */
+.main-menu {
+  display: none !important;
+}
+
+/* 4. 再次确保首页底部的联系框完全消失 */
+.call-to-action {
+  display: none !important;
+}
