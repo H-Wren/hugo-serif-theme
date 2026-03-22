@@ -86,114 +86,88 @@ body, .header, .footer, .sub-footer {
 a {
   color: #000 !important;
 }
-/* --- 汉松文视觉修正案：强制生效版 --- */
 
-/* 1. 彻底清除粉色小人插画 */
-.home-intro img, .intro img {
+/* ============================================================
+   汉松文个人站：全站视觉终极修正版 (2026 Edition)
+   ============================================================ */
+
+/* 1. 基础颜色与背景覆盖 */
+:root {
+  --primary: #000000 !important;
+}
+
+body, .header, .footer, .sub-footer {
+  background-color: #F5F2ED !important; /* 你选定的米色背景 */
+}
+
+/* 2. LOGO 修正：强制彻底变黑，消除粉色残余 */
+.logo, .logo a, .logo span, .logo strong, .logo b, .logo-mobile a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* 3. 首页职业概述：左对齐 + 两端对齐 + 呼吸感布局 */
+.home-intro {
+  text-align: left !important;
+  padding: 80px 0 40px 0 !important;
+
+  .container {
+    margin-left: 0 !important; /* 确保容器靠左 */
+    margin-right: auto !important;
+  }
+
+  .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 850px !important; /* 限制宽度，提升阅读质感 */
+    text-align: left !important; /* 覆盖之前的 center 指令 */
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    color: #000 !important;
+    text-align: left !important;
+  }
+
+  p {
+    text-align: justify !important; /* 期待的两端对齐 */
+    text-justify: inter-word;
+    color: #333 !important;
+    line-height: 1.8 !important;
+  }
+
+  img {
+    display: none !important; /* 隐藏粉色插画 */
+  }
+}
+
+/* 4. 隐藏不必要的商业元素（右上角菜单、底部联系框、装饰条） */
+.main-menu, 
+#main-menu-mobile, 
+.call-to-action, 
+.strip-primary {
   display: none !important;
+  visibility: hidden !important;
 }
 
-/* 2. 让文字区域全宽显示，不再给图片留位子 */
-.home-intro .col-12, .intro .col-12 {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-  text-align: center !important;
-}
-
-/* 3. 修正顶部 Logo 和 菜单颜色 */
-.logo a, .logo span, .main-menu a {
-  color: #000000 !important;
-}
-.logo-mobile a {
-  color: #000000 !important;
-}
-
-/* 4. 解决底部人名看不清的问题：强制加深底色并变黑文字 */
+/* 5. 底部信息修正：加深背景并变黑文字 */
 .sub-footer {
-  background: #E8E4DE !important; /* 稍微加深一点米色，做出层次感 */
-  padding: 20px 0 !important;
+  background: #E8E4DE !important; /* 略深米色作为区分 */
+  border-top: 1px solid #d1cdc7 !important;
+  padding: 25px 0 !important;
 }
+
 .sub-footer-inner, .sub-footer a, .sub-footer span, .footer-copy {
   color: #000000 !important;
   opacity: 1 !important;
   font-weight: 500 !important;
+  text-decoration: none !important;
 }
 
-/* 5. 所有的粉色文字/按钮统一变黑 */
-a, .button, .btn, h1, h2, h3 {
-  color: #000000 !important;
-}
-/* 去掉首页卡片的投影，让它变平面，更符合现代审美 */
+/* 6. 卡片视觉优化：去掉阴影，变平面 */
 .card {
   box-shadow: none !important;
-  border: 1px solid #d1cdc7 !important; /* 给卡片加一个淡淡的边框，而不是阴影 */
-  background-color: transparent !important; /* 卡片背景也变透明，融入米色 */
-}
-/* 彻底变黑：Logo 的粉色后缀 */
-.logo span {
-  color: #000000 !important;
+  border: 1px solid #d1cdc7 !important;
+  background-color: transparent !important;
 }
 
-/* 隐藏右上角不需要的导航按钮（Team, About, Contact 等） */
-/* 如果你想彻底去掉这 4 个，用这段 */
-.main-menu {
-  display: none !important;
-}
-/* 如果你想保留，只想让它们变黑，用这段 */
-/* .main-menu a { color: #000 !important; } */
-/* 优化职业概述排版：左对齐 + 限制宽度 */
-.home-intro {
-  text-align: left !important;
-  padding-top: 60px !important;
-}
 
-.home-intro .col-12 {
-  max-width: 800px !important; /* 限制宽度，防止文字拉得太长 */
-  margin: 0 !important;        /* 取消居中偏移 */
-}
-
-.home-intro h1 {
-  font-size: 2.8rem !important;
-  margin-bottom: 30px !important;
-  letter-spacing: -1px;
-}
-
-.home-intro p {
-  line-height: 1.8 !important;
-  margin-bottom: 20px !important;
-}
-/* 隐藏首页底部的联系方式方框 */
-.call-to-action {
-  display: none !important;
-}
-/* --- 视觉整洁度终极优化 --- */
-
-/* 1. 强制 Logo 变黑 (针对 HugoSerif) */
-.logo, .logo a, .logo span, .logo strong, .logo b {
-  color: #000000 !important;
-}
-
-/* 2. 职业概述：改为两端对齐并靠左排列 */
-.home-intro {
-  text-align: left !important; /* 整体容器靠左 */
-}
-
-.home-intro .col-12 {
-  margin: 0 !important;      /* 彻底取消居中偏移 */
-  max-width: 850px !important; /* 限制宽度，防止文字铺满屏幕导致阅读困难 */
-}
-
-.home-intro p, .home-intro h1 {
-  text-align: justify !important; /* 文字两端对齐，保持边缘整齐 */
-  text-justify: inter-word;
-}
-
-/* 3. 彻底清除右上角所有粉色按钮 */
-.main-menu {
-  display: none !important;
-}
-
-/* 4. 再次确保首页底部的联系框完全消失 */
-.call-to-action {
-  display: none !important;
-}
