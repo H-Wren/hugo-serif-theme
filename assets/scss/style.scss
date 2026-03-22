@@ -86,3 +86,32 @@ body, .header, .footer, .sub-footer {
 a {
   color: #000 !important;
 }
+/* 让底部（Footer）的人名变黑，提高清晰度 */
+.footer, .sub-footer, .sub-footer a, .sub-footer-inner {
+  color: #000000 !important;
+}
+
+/* 确保底部社交图标也是黑色 */
+.sub-footer .social-icons i, .sub-footer .social-icons a {
+  color: #000000 !important;
+}
+/* 隐藏掉那个带粉色的人物大插画 */
+.home-intro img {
+  display: none !important;
+}
+
+/* 调整左侧文字宽度，让它居中或更有排版感 */
+.home-intro .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center; /* 或者保持 left，根据你喜好 */
+}
+/* 统一页眉 Logo 颜色为黑色 */
+.logo a, .main-menu a {
+  color: #000000 !important;
+}
+
+/* 鼠标悬停在菜单上时，显示一个淡淡的灰色而不是粉色 */
+.main-menu a:hover {
+  color: #666666 !important;
+}
