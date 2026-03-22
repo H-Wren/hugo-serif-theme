@@ -123,3 +123,9 @@ a {
 a, .button, .btn, h1, h2, h3 {
   color: #000000 !important;
 }
+/* 去掉首页卡片的投影，让它变平面，更符合现代审美 */
+.card {
+  box-shadow: none !important;
+  border: 1px solid #d1cdc7 !important; /* 给卡片加一个淡淡的边框，而不是阴影 */
+  background-color: transparent !important; /* 卡片背景也变透明，融入米色 */
+}
