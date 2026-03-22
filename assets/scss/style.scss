@@ -129,3 +129,40 @@ a, .button, .btn, h1, h2, h3 {
   border: 1px solid #d1cdc7 !important; /* 给卡片加一个淡淡的边框，而不是阴影 */
   background-color: transparent !important; /* 卡片背景也变透明，融入米色 */
 }
+/* 彻底变黑：Logo 的粉色后缀 */
+.logo span {
+  color: #000000 !important;
+}
+
+/* 隐藏右上角不需要的导航按钮（Team, About, Contact 等） */
+/* 如果你想彻底去掉这 4 个，用这段 */
+.main-menu {
+  display: none !important;
+}
+/* 如果你想保留，只想让它们变黑，用这段 */
+/* .main-menu a { color: #000 !important; } */
+/* 优化职业概述排版：左对齐 + 限制宽度 */
+.home-intro {
+  text-align: left !important;
+  padding-top: 60px !important;
+}
+
+.home-intro .col-12 {
+  max-width: 800px !important; /* 限制宽度，防止文字拉得太长 */
+  margin: 0 !important;        /* 取消居中偏移 */
+}
+
+.home-intro h1 {
+  font-size: 2.8rem !important;
+  margin-bottom: 30px !important;
+  letter-spacing: -1px;
+}
+
+.home-intro p {
+  line-height: 1.8 !important;
+  margin-bottom: 20px !important;
+}
+/* 隐藏首页底部的联系方式方框 */
+.call-to-action {
+  display: none !important;
+}
